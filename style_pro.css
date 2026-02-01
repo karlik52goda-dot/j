@@ -1,0 +1,149 @@
+/* Основні налаштування */
+body {
+  /* Comic Sans MS може не бути на всіх пристроях, додаємо системні шрифти */
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Recursive', sans-serif;
+  background: linear-gradient(to bottom, #001530, #000022);
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden; /* Щоб не було горизонтальної прокрутки */
+}
+
+/* Шапка сайту */
+.header {
+  background-color: #380dad;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+}
+
+.header h1 {
+  font-size: clamp(28px, 5vw, 42px); /* Адаптивний розмір заголовка */
+  margin: 0;
+  animation: glow 2s infinite alternate;
+}
+
+.header p {
+  font-size: 18px;
+  margin: 12px 0 20px 0;
+}
+
+/* Ефект сяйва для заголовка */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff77aa; }
+  to { text-shadow: 0 0 20px #ff55ff; }
+}
+
+/* Навігація */
+.nav {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffe0ff;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav a:hover {
+  background-color: #a24fff;
+  transform: scale(1.05);
+}
+
+/* Банер */
+.banner-box {
+  margin-top: 25px;
+  padding: 0 20px;
+}
+
+.banner {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  border-radius: 15px;
+  border: 3px solid #ff55aa;
+  box-shadow: 0 0 25px rgba(255,85,170,0.5);
+  transition: transform 0.4s;
+}
+
+.banner:hover {
+  transform: scale(1.01);
+}
+
+/* Контент та блоки */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.block {
+  background-color: #02004d;
+  border: 3px solid #6044f7;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 360px; /* Блоки підлаштовуються під ширину екрана */
+  padding: 25px;
+  text-align: center;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  box-sizing: border-box;
+}
+
+.block:hover {
+  transform: scale(1.05) rotate(-1deg);
+  border-color: #ff77aa;
+  box-shadow: 0 0 40px rgba(255,119,170,0.7);
+}
+
+.block h2 {
+  color: #ffccff;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.block p {
+  font-size: 16px;
+  color: #dbd8ff;
+  line-height: 1.6;
+  text-align: left; /* Текст зручніше читати зліва */
+}
+
+/* Зображення в блоках */
+.block img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 3px solid #8655f7;
+  margin-top: 18px;
+  transition: transform 0.4s;
+}
+
+.block img:hover {
+  transform: scale(1.03);
+}
+
+/* Футер */
+.footer {
+  background-color: #6a0dad;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 -5px 25px rgba(0,0,0,0.6);
+  margin-top: 50px;
+}
+
+/* Плавний скрол до секцій */
+html {
+  scroll-behavior: smooth;
+}
